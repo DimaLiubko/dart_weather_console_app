@@ -8,6 +8,8 @@ Future<void> main(List<String> arguments) async {
 
   final city = arguments.first;
   final api = WeatherApiClient();
-  final locationId = await api.getLocationId(city);
-  print(locationId);
+
+  final weather = await api.getWeather(city);
+
+  print(weather);
 }
